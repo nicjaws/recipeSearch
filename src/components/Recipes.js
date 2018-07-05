@@ -13,7 +13,8 @@ const Recipes = props => (
                         alt={recipe.title} 
                     />
                         <div className="recipe__text">
-                            <h5 className="recipes__title">{ recipe.title }</h5>
+                            <h5 className="recipes__title">
+                            { recipe.title.length < 20 ? `${recipe.title}` : `${recipe.title.substring(0, 25)}...` }</h5>
                             <p className="recipes__subtitle">Publisher: <span>
                                 {recipe.publisher}
                             </span></p>
